@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'AIForge',
   description: 'A SaaS application for the creation and analysis of a wide array of AI functionalities.',
+  
 }
 
 export default function RootLayout({
@@ -18,6 +19,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+        </head>
         <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>
