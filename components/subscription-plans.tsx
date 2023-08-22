@@ -94,14 +94,20 @@ const SubscriptionPlans = () => {
             </div>
             <div className="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4 gap-x-5">
                 {plans.map((plan) => (
-                    <div className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-lg lg:rounded-l-lg bg-white mt-4">
+                    <div
+                        key={plan.title}
+                        className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-lg lg:rounded-l-lg bg-white mt-4"
+                    >
                         <div className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
                             <div className="p-8 text-3xl font-bold text-center border-b-4">
                                 {plan.title}
                             </div>
                             <ul className="w-full text-center text-sm">
                                 {plan.items.map((item) => (
-                                    <li className="py-2">
+                                    <li
+                                        key={item.label}
+                                        className="py-2"
+                                    >
                                         <Card
                                             key={item.label}
                                             className="pl-3 pr-3 flex items-center justify-between"
