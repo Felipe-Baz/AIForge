@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ClerkProvider } from '@clerk/nextjs'
 import { ModelProvider } from '@/components/model-provider'
+import { ToasterProvider } from '@/components/toaster-provider'
+import { CrispProvider } from '@/components/crisp-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,10 +22,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <head>
-          <link rel="icon" href="/favicon.ico" sizes="any" />
-        </head>
+        <CrispProvider />
         <body className={inter.className}>
+          <ToasterProvider />
           <ModelProvider />
           {children}
         </body>

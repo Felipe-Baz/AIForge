@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { MessageSquare, ImageIcon, VideoIcon, Music, Code, ActivitySquare, Check, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useState } from "react";
 
