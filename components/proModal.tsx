@@ -45,14 +45,7 @@ const tools = [
         color: "text-green-700",
         bgColor: "bg-green-500/10",
         href: "/code",
-    },
-    {
-        label: "Sentiment Analysis",
-        icon: ActivitySquare,
-        color: "text-purple-500",
-        bgColor: "bg-purple-500/10",
-        href: "/sentiment",
-    },
+    }
   ]
 
 export const ProModal = () => {
