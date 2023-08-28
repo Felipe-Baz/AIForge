@@ -22,8 +22,7 @@ export const LandingHero = () => {
                 "Blog Writing.",
                 "Mail Writing.",
                 "Video Generation",
-                "Image Generation",
-                "Sentiment Analysis"
+                "Image Generation"
               ],
               autoStart: true,
               loop: true,

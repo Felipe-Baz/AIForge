@@ -50,13 +50,6 @@ const tools = [
       bgColor: "bg-green-500/10",
       href: "/code",
   },
-  {
-      label: "Sentiment Analysis",
-      icon: ActivitySquare,
-      color: "text-purple-500",
-      bgColor: "bg-purple-500/10",
-      href: "/sentiment",
-  },
 ]
 
 const DashboardPage = () => {

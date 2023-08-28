@@ -61,12 +61,6 @@ const routes = [
         color: "text-green-700",
     },
     {
-        label: "Sentiment Analysis",
-        icon: ActivitySquare,
-        href: "/sentiment",
-        color: "text-purple-500",
-    },
-    {
         label: "Settings",
         icon: Settings,
         href: "/settings",
