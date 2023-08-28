@@ -94,14 +94,20 @@ const SubscriptionPlans = () => {
             </div>
             <div className="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4 gap-x-5">
                 {plans.map((plan) => (
-                    <div className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-lg lg:rounded-l-lg bg-white mt-4">
+                    <div
+                        key={plan.title}
+                        className="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-lg lg:rounded-l-lg bg-white mt-4"
+                    >
                         <div className="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
                             <div className="p-8 text-3xl font-bold text-center border-b-4">
                                 {plan.title}
                             </div>
                             <ul className="w-full text-center text-sm">
                                 {plan.items.map((item) => (
-                                    <li className="py-2">
+                                    <li
+                                        key={item.label}
+                                        className="py-2"
+                                    >
                                         <Card
                                             key={item.label}
                                             className="pl-3 pr-3 flex items-center justify-between"
@@ -121,7 +127,7 @@ const SubscriptionPlans = () => {
                                 {plan.uses && (
                                     <li>
                                         <Card
-                                            key={"Uses"}
+                                            key={plan.uses}
                                             className="flex items-center border-0 border-transparent justify-center"
                                         >
                                             <div className="flex items-center  gap-x-4">
@@ -141,7 +147,11 @@ const SubscriptionPlans = () => {
                                 <span className="text-base"> for one user</span>
                             </div>
                             <div className="flex items-center justify-center">
-                                <Button variant={"premium"} className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                                <Button 
+                                        key={plan.buttonMessage}
+                                        variant={"premium"}
+                                        className="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                                    >
                                     {plan.buttonMessage}
                                 </Button>
                             </div>
