@@ -46,7 +46,7 @@ export async function GET() {
                             name: "AIForge",
                             description: "Unlimited AI Generations"
                         },
-                        unit_amount: 2000,
+                        unit_amount: 100,
                         recurring: {
                             interval: "month"
                         }
